@@ -1,0 +1,22 @@
+
+
+
+              leaf_1
+              branch_a
+              root_func
+                3
+
+              leaf_2
+              branch_a
+              root_func
+                1
+
+              branch_a
+              root_func
+                2
+
+              leaf_3
+              branch_b
+              root_func
+                20
+

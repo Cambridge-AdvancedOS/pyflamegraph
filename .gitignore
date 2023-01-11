@@ -1,0 +1,5 @@
+*.py.black
+*.py.mypy
+*.py.pylint
+
+__pycache__
