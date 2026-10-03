@@ -382,6 +382,8 @@ class Flamegraph:
                     ha="center",
                     va="center",
                     color="black",
+                    rotation=20,
+                    fontsize="xx-small",
                 )
 
         ax.set_xlim(0, self.width)
