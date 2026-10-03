@@ -361,13 +361,16 @@ class Flamegraph:
         )
 
         # You may also need to tweak this
-        characters_per_line = plot_width / 8
+        characters_per_line = plot_width / 2
 
         for (i, (bar, colour_list)) in enumerate(zip(bars, colours)):
             ax.broken_barh(
                 [b["bar"] for b in bar],
                 (i, 1),
                 facecolors=colour_list,
+                linewidth=0.5,
+                linestyle=':',
+                edgecolor='gray',
                 #                edgecolors='white',
             )
             for bar_segment in bar:
@@ -376,13 +379,13 @@ class Flamegraph:
                 if len(bar_segment["name"]) > bar_max_chars:
                     continue
                 ax.text(
-                    x=start + width / 2,
-                    y=i + 0.5,
+                    x=start + width / 2 - 0.5,
+                    y=i + 0.25,
                     s=bar_segment["name"],
-                    ha="center",
-                    va="center",
+                    ha="left",
+                    va="bottom",
                     color="black",
-                    rotation=20,
+                    rotation=35,
                     fontsize="xx-small",
                 )
 
